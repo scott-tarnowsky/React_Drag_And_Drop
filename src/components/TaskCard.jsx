@@ -4,7 +4,7 @@ import "./TaskCard.css";
 import Tag from "./Tag";
 import deleteIcon from "../assets/delete.png";
 
-const TaskCard = ({ title, tags, handleDelete, index }) => {
+const TaskCard = ({ title, tags, handleDelete, index, setActiveCard }) => {
     return (
         <article className='task_card' draggable>
             <p className='task_text'>{title}</p>

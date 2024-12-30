@@ -11,7 +11,7 @@ const oldTasks = localStorage.getItem("tasks");
 
 const App = () => {
   const [tasks, setTasks] = useState(JSON.parse(oldTasks) || []);
-  
+  const [activeCard, setActiveCard] = useState(null)
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -32,6 +32,7 @@ const App = () => {
           tasks={tasks}
           status="todo"
           handleDelete={handleDelete}
+          setActiveCard={setActiveCard}
         />
         <TaskColumn
           title="Doing"
@@ -39,6 +40,7 @@ const App = () => {
           tasks={tasks}
           status="doing"
           handleDelete={handleDelete}
+          setActiveCard={setActiveCard}
         />
         <TaskColumn
           title="Done"
@@ -46,6 +48,7 @@ const App = () => {
           tasks={tasks}
           status="done"
           handleDelete={handleDelete}
+          setActiveCard={setActiveCard}
         />
       </main>
     </div>
