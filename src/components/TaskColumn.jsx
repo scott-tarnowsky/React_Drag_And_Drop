@@ -1,5 +1,6 @@
 import React from "react";
 import Todo from "../assets/direct-hit.png";
+import DropArea from "./DropArea";
 
 import "./TaskColumn.css";
 import TaskCard from "./TaskCard";
@@ -11,9 +12,12 @@ const TaskColumn = ({ title, icon, tasks, status, handleDelete, setActiveCard })
                 <img className='task_column_icon' src={icon} alt='' /> {title}
             </h2>
 
+            <DropArea />
+
             {tasks.map(
                 (task, index) =>
                     task.status === status && (
+                        <React.Fragment key={index}>
                         <TaskCard
                             key={index}
                             title={task.task}
@@ -22,6 +26,8 @@ const TaskColumn = ({ title, icon, tasks, status, handleDelete, setActiveCard })
                             index={index}
                             setActiveCard={setActiveCard}
                         />
+                        <DropArea />
+                        </React.Fragment>
                     )
             )}
         </section>

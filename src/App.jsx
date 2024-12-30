@@ -51,6 +51,7 @@ const App = () => {
           setActiveCard={setActiveCard}
         />
       </main>
+      <h1>Active Card - {activeCard}</h1>
     </div>
   );
 };
