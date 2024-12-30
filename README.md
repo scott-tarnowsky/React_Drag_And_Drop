@@ -1,7 +1,8 @@
 /////////////////////////////////
 /////////////////////////////////
 
-Please change directories into the To-Do app repo
+Clone the repo 
+Change directories into the Drag And Drop app repo
 `cd React_Drag_And_Drop`
 
 Then, run `npm install`
